@@ -74,19 +74,19 @@ export default function Contact() {
           <h2 className="text-4xl md:text-5xl font-bold text-white">Get In Touch</h2>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-10 max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-semibold text-white mb-4">Let&apos;s Connect</h3>
-            <p className="text-zinc-400 mb-8 leading-relaxed">
+            <h3 className="text-xl font-semibold text-white mb-3">Let&apos;s Connect</h3>
+            <p className="text-zinc-400 mb-7 leading-relaxed">
               Feel free to reach out for collaborations, opportunities, or just to say hello.
               I&apos;m always open to discussing new projects and ideas.
             </p>
 
-            <div className="space-y-3 mb-8">
+            <div className="space-y-3 mb-7">
               {contactInfo.map((info, index) => (
                 <motion.div
                   key={info.label}
@@ -94,9 +94,9 @@ export default function Contact() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="flex items-center gap-4 glass-card rounded-xl p-4 border border-zinc-800"
+                  className="flex items-center gap-3.5 bg-zinc-900/60 rounded-xl p-3.5 border border-zinc-800/60"
                 >
-                  <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-zinc-800 text-indigo-400">
+                  <div className="w-9 h-9 flex items-center justify-center rounded-lg bg-zinc-800 text-indigo-400">
                     {info.icon}
                   </div>
                   <div>
@@ -107,7 +107,7 @@ export default function Contact() {
               ))}
             </div>
 
-            <div className="flex gap-3">
+            <div className="flex gap-2.5">
               {[
                 {
                   href: `mailto:${personalInfo.email}`,
@@ -141,7 +141,7 @@ export default function Contact() {
                   href={item.href}
                   target={item.target ? "_blank" : undefined}
                   rel={item.target ? "noopener noreferrer" : undefined}
-                  className="w-10 h-10 flex items-center justify-center rounded-lg bg-zinc-800 text-zinc-400 hover:bg-indigo-600 hover:text-white transition-all"
+                  className="w-9 h-9 flex items-center justify-center rounded-lg bg-zinc-800 text-zinc-400 hover:bg-indigo-600 hover:text-white transition-all"
                 >
                   {item.icon}
                 </a>
@@ -156,16 +156,16 @@ export default function Contact() {
           >
             <form
               onSubmit={handleSubmit}
-              className="glass-card rounded-2xl p-8 border border-zinc-800"
+              className="bg-zinc-900/60 rounded-2xl p-7 border border-zinc-800/60"
             >
-              <div className="space-y-5">
+              <div className="space-y-4">
                 <div>
                   <label className="block text-zinc-400 text-sm mb-2">Name</label>
                   <input
                     type="text"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 bg-zinc-900 border border-zinc-800 rounded-lg text-white focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 focus:outline-none transition-all"
+                    className="w-full px-4 py-2.5 bg-zinc-900 border border-zinc-800 rounded-lg text-white text-sm focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 focus:outline-none transition-all"
                     required
                   />
                 </div>
@@ -175,7 +175,7 @@ export default function Contact() {
                     type="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3 bg-zinc-900 border border-zinc-800 rounded-lg text-white focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 focus:outline-none transition-all"
+                    className="w-full px-4 py-2.5 bg-zinc-900 border border-zinc-800 rounded-lg text-white text-sm focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 focus:outline-none transition-all"
                     required
                   />
                 </div>
@@ -185,7 +185,7 @@ export default function Contact() {
                     type="text"
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    className="w-full px-4 py-3 bg-zinc-900 border border-zinc-800 rounded-lg text-white focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 focus:outline-none transition-all"
+                    className="w-full px-4 py-2.5 bg-zinc-900 border border-zinc-800 rounded-lg text-white text-sm focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 focus:outline-none transition-all"
                   />
                 </div>
                 <div>
@@ -194,13 +194,13 @@ export default function Contact() {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     rows={4}
-                    className="w-full px-4 py-3 bg-zinc-900 border border-zinc-800 rounded-lg text-white focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 focus:outline-none transition-all resize-none"
+                    className="w-full px-4 py-2.5 bg-zinc-900 border border-zinc-800 rounded-lg text-white text-sm focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 focus:outline-none transition-all resize-none"
                     required
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full px-6 py-3.5 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-500 transition-all shadow-lg shadow-indigo-600/25"
+                  className="w-full px-6 py-2.5 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-500 transition-all text-sm shadow-lg shadow-indigo-600/25"
                 >
                   Send Message
                 </button>

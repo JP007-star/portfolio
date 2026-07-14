@@ -29,7 +29,7 @@ export default function Skills() {
           <h2 className="text-4xl md:text-5xl font-bold text-white">Skills & Expertise</h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 mb-16 max-w-4xl mx-auto">
           {categories.map((category, catIndex) => (
             <motion.div
               key={category.name}
@@ -37,17 +37,17 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: catIndex * 0.1 }}
-              className="glass-card rounded-2xl p-6 border border-zinc-800"
+              className="bg-zinc-900/60 rounded-xl p-6 border border-zinc-800/60"
             >
-              <h3 className="text-lg font-medium text-white mb-6">{category.name}</h3>
-              <div className="space-y-4">
+              <h3 className="text-base font-medium text-white mb-5">{category.name}</h3>
+              <div className="space-y-3.5">
                 {category.items.map((skill, index) => (
                   <div key={skill.name}>
-                    <div className="flex justify-between text-sm mb-2">
+                    <div className="flex justify-between text-xs mb-1.5">
                       <span className="text-zinc-300">{skill.name}</span>
                       <span className="text-zinc-500">{skill.level}%</span>
                     </div>
-                    <div className="h-1.5 bg-zinc-800 rounded-full overflow-hidden">
+                    <div className="h-1 bg-zinc-800 rounded-full overflow-hidden">
                       <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: `${skill.level}%` }}
@@ -69,8 +69,8 @@ export default function Skills() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <h3 className="text-lg font-medium text-white mb-6">All Skills</h3>
-          <div className="flex flex-wrap justify-center gap-2.5 max-w-3xl mx-auto">
+          <h3 className="text-base font-medium text-white mb-5">All Skills</h3>
+          <div className="flex flex-wrap justify-center gap-2 max-w-2xl mx-auto">
             {allSkills.map((skill, index) => (
               <motion.span
                 key={skill.name}
@@ -78,7 +78,7 @@ export default function Skills() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.015 }}
-                className="px-4 py-2 bg-zinc-900 border border-zinc-800 text-zinc-400 rounded-lg hover:border-indigo-500/40 hover:text-indigo-300 hover:bg-indigo-500/10 transition-all cursor-default text-sm"
+                className="px-3 py-1.5 bg-zinc-900 border border-zinc-800 text-zinc-400 rounded-lg hover:border-indigo-500/40 hover:text-indigo-300 hover:bg-indigo-500/10 transition-all cursor-default text-sm"
               >
                 {skill.name}
               </motion.span>

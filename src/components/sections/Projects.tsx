@@ -20,8 +20,8 @@ function ProjectCard({ project, index }: ProjectCardProps) {
     const y = e.clientY - rect.top;
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
-    const rotateX = (y - centerY) / 25;
-    const rotateY = (centerX - x) / 25;
+    const rotateX = (y - centerY) / 30;
+    const rotateY = (centerX - x) / 30;
     setRotation({ x: rotateX, y: rotateY });
   };
 
@@ -40,32 +40,32 @@ function ProjectCard({ project, index }: ProjectCardProps) {
         ref={cardRef}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
-        className="group relative bg-zinc-900/50 border border-zinc-800 rounded-2xl p-6 transition-all duration-300 hover:border-indigo-500/30 hover:bg-zinc-900/80"
+        className="group relative bg-zinc-900/60 border border-zinc-800/60 rounded-xl p-5 transition-all duration-300 hover:border-indigo-500/40 hover:bg-zinc-900/80"
         style={{
           transform: `perspective(1000px) rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
           transformStyle: "preserve-3d",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-xl" />
 
         <div className="relative z-10">
-          <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center justify-between mb-3">
             <span className="text-indigo-400 font-mono text-xs">{project.year}</span>
             {project.link && (
               <a
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 flex items-center justify-center rounded-lg bg-zinc-800 text-zinc-400 hover:bg-indigo-600 hover:text-white transition-all"
+                className="w-7 h-7 flex items-center justify-center rounded-lg bg-zinc-800 text-zinc-400 hover:bg-indigo-600 hover:text-white transition-all"
               >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
               </a>
             )}
           </div>
 
-          <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-indigo-300 transition-colors">
+          <h3 className="text-base font-semibold text-white mb-2.5 group-hover:text-indigo-300 transition-colors">
             {project.title}
           </h3>
 
@@ -77,7 +77,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
             {project.techStack.slice(0, 4).map((tech) => (
               <span
                 key={tech}
-                className="px-2.5 py-1 bg-zinc-800/80 text-zinc-400 text-xs rounded-md border border-zinc-700/50"
+                className="px-2 py-1 bg-zinc-800/80 text-zinc-400 text-xs rounded-md border border-zinc-700/50"
               >
                 {tech}
               </span>
@@ -103,7 +103,7 @@ export default function Projects() {
           <h2 className="text-4xl md:text-5xl font-bold text-white">Featured Projects</h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
           {projects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
           ))}

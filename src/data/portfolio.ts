@@ -1,85 +1,136 @@
 export const personalInfo = {
   name: "Jaya Prasad M",
-  title: "Lead Software Engineer",
-  email: "justice_of_peace@yahoo.com",
-  phone: "+91 90800 59962",
+  title: "Java Developer",
+  email: "jayaprasad.jp.m@gmail.com",
+  phone: "+91-9080059962",
   location: "Tirunelveli, Tamil Nadu, India",
-  address: "27A/3, Thirumal Nagar, Thiyagaraja Nagar, Tirunelveli - 627011",
+  address: "Tirunelveli, Tamil Nadu, India",
   linkedin: "https://linkedin.com/in/jayaprasad",
   github: "https://github.com/JP007-star",
   resumeUrl: "https://drive.google.com/drive/folders/1DkGQLQz1r0o01-XTygWKVD-KlAXBmC2S",
 };
 
 export const bio = {
-  short: "Full Stack Developer & DevOps Engineer building scalable systems with modern technologies.",
-  full: "An Experienced Full Stack DevOps Engineer, has developed and demonstrated various web and mobile applications in Spring Boot MVC, Laravel, Codeigniter and Flutter in IT Companies. Can Build infrastructure, Continuous Integration and Continuous Delivery Pipelines with tools like Jenkins (CI/CD) and automate with tools like Ansible.",
-  yearsOfExperience: 4,
+  short: "Java Developer with 5+ years of experience in building scalable, cloud-native applications using Java, Spring Boot, React.js, and GCP.",
+  full: "Dedicated and results-driven Java Developer with 5+ years of comprehensive experience in designing, developing, and deploying enterprise-grade applications. Proficient in microservices architecture, RESTful API development, frontend performance optimization, and cloud deployments. Demonstrated success in delivering high-impact solutions, enhancing system performance, and automating complex business workflows. Adept at collaborating with cross-functional teams to achieve project objectives and drive organizational growth.",
+  yearsOfExperience: 5,
 };
 
 export const skills = {
   languages: [
-    { name: "Java/Spring Boot", level: 95 },
-    { name: "React/Next.js", level: 90 },
-    { name: "Node.js", level: 60 },
-    { name: "Python", level: 70 },
-    { name: "PHP/Laravel", level: 70 },
-    { name: "Dart/Flutter", level: 80 },
-    { name: "C/C++", level: 70 },
+    { name: "Java 8 / 11 / 17 / 21 (LTS)", level: 95 },
+    { name: "JavaScript", level: 85 },
+  ],
+  frameworks: [
+    { name: "Spring Boot 3.x", level: 95 },
+    { name: "React.js 18.x", level: 85 },
+  ],
+  databases: [
+    { name: "MySQL 8.x", level: 85 },
+    { name: "MongoDB 7.x", level: 90 },
+  ],
+  devops: [
+    { name: "Docker", level: 90 },
+    { name: "Kubernetes", level: 85 },
+    { name: "Helm", level: 80 },
+    { name: "GitLab CI/CD", level: 85 },
+    { name: "Git / GitHub", level: 85 },
   ],
   cloud: [
-    { name: "AWS", level: 80 },
-    { name: "Docker", level: 70 },
-    { name: "Kubernetes", level: 80 },
-    { name: "Ansible", level: 80 },
-    { name: "Jenkins", level: 65 },
+    { name: "GCP", level: 85 },
+    { name: "AWS", level: 85 },
   ],
-  tools: [
-    { name: "Git", level: 85 },
-    { name: "Linux", level: 85 },
-    { name: "AWS Cloud", level: 80 },
-    { name: "Android Studio", level: 60 },
+  toolsAndPractices: [
+    { name: "IntelliJ IDEA", level: 85 },
+    { name: "VS Code", level: 85 },
+    { name: "Linux", level: 80 },
+    { name: "Agile / Scrum", level: 85 },
+    { name: "Confluence (Wiki Integration)", level: 80 },
   ],
 };
 
 export const experience = [
   {
     id: 1,
-    role: "Associate Software Engineer",
-    company: "Torry Harris Integration Solution",
-    location: "Bangalore",
-    period: "August 2021 - Present",
+    role: "Senior Engineer",
+    company: "Altimetrik",
+    location: "Bengaluru",
+    period: "Mar 2025 - Present",
     description:
-      "Working as Associate Software Engineer. Specialized in DevOps Tools like Jenkins, Ansible, Docker, Kubernetes, AWS. Can setup CI-CD pipeline and automate delivery.",
-    teamSize: "5-10",
-    achievements: ["CI/CD Pipeline Setup", "Cloud Infrastructure", "Automation"],
+      "Project: Lending Platform | Calibo. Designed and developed a DocuSign integration microservice from scratch using Java and Spring Boot, automating document workflows and reducing manual processing effort by 50%. Developed and maintained scalable React.js applications using functional components and hooks (useState, useEffect), optimizing component re-rendering for frontend performance. Built and consumed RESTful APIs enabling communication between React frontends and Spring Boot microservices. Configured MongoDB replica set with automatic failover, improving application uptime and fault tolerance. Implemented data persistence using Spring Data JPA, designing entity models, repositories, and relationships. Worked on cloud-native deployments across GCP and AWS.",
+    achievements: [
+      "DocuSign Integration - 50% reduction in manual processing",
+      "MongoDB Replica Set with Automatic Failover",
+      "RESTful API Development Across 6 Microservices",
+      "Frontend Performance Optimization (React.js)",
+    ],
   },
   {
     id: 2,
-    role: "Software Engineer Trainee",
-    company: "Avanze Technologies",
-    location: "Salem",
-    period: "January 2021 - August 2021",
+    role: "Senior Software Engineer",
+    company: "Yash Technologies",
+    location: "Bengaluru",
+    period: "Nov 2024 - Mar 2025",
     description:
-      "Working as PHP Trainee. Working in MortgageSats Project – (Codeigniter Ajax Based Full Stack Web Application)",
-    teamSize: "3-5",
-    achievements: ["Full Stack Development", "PHP Development"],
+      "Project: ATS Internal App. Designed and developed a Resume ATS Scoring Platform using Spring Boot microservices to evaluate resumes based on predefined scoring criteria, with a React-based frontend for input capture and score display. Integrated the Google Gemini API to analyze resume content and generate contextual relevance scores, improving accuracy and consistency of ATS evaluations. Owned end-to-end system design, including API contracts, service boundaries, data models, and error-handling strategies. Deployed on AWS with MongoDB as the primary database.",
+    achievements: [
+      "Resume ATS Scoring Platform (Spring Boot + React)",
+      "Google Gemini API Integration",
+      "AWS Deployment with MongoDB",
+    ],
   },
   {
     id: 3,
-    role: "Freelance Developer",
-    company: "Self-employed",
-    location: "Remote",
-    period: "2019 - Present",
+    role: "Associate Software Engineer",
+    company: "Torry Harris Integrated Solution",
+    location: "Bengaluru",
+    period: "Aug 2021 - Nov 2024",
     description:
-      "Developed several websites and various web applications and few Android Apps. Apart from that I am also designing few embedded prototypes. Working with full stack application (stock and inventory management software)",
-    teamSize: "1",
-    achievements: ["10+ Projects Delivered", "Client Satisfaction"],
+      "Project: API Catalogue | BT Group. Designed and implemented RESTful APIs for seamless communication between frontend and backend components. Collaborated with development teams to design appropriate React Redux data flow and state management strategies. Utilized Spring Boot framework for efficient and scalable backend development, migrated Java REST API to AWS cloud using EKS and other AWS web services. Created and optimized database schemas and queries for MySQL and MongoDB, worked with Kafka. Managed migration and upgradation of Java Development Kit (JDK) versions from JDK 8 to JDK 11 and JDK 17.",
+    achievements: [
+      "RESTful API Development",
+      "AWS EKS Migration",
+      "JDK Upgradation (8 → 11 → 17)",
+      "30% System Performance Improvement",
+      "25% Cloud Infrastructure Cost Reduction",
+    ],
+  },
+  {
+    id: 4,
+    role: "Software Engineer Trainee",
+    company: "Avanze Technologies",
+    location: "Salem",
+    period: "Feb 2021 - Jul 2021",
+    description:
+      "Project: MortgageSats | Firstsource. Designed and implemented RESTful APIs and backend functionality using PHP frameworks such as Laravel and CodeIgniter. Created responsive and intuitive user interfaces using React.js, HTML5, CSS3, and related frontend technologies.",
+    achievements: [
+      "PHP/Laravel Backend Development",
+      "React.js Frontend Components",
+    ],
   },
 ];
 
 export const projects = [
   {
     id: 1,
+    title: "PDF RAG Chatbot",
+    description:
+      "Built an end-to-end RAG (Retrieval-Augmented Generation) system where documents are chunked, embedded using Sentence Transformers, stored in FAISS, and retrieved using similarity search. Integrated retrieved content with Llama3 (Ollama) and exposed the service using FastAPI.",
+    techStack: ["Python", "FastAPI", "FAISS", "Sentence-Transformers", "Llama3", "Ollama"],
+    link: "https://github.com/JP007-star/pdf-rag-chatbot",
+    year: "2026",
+  },
+  {
+    id: 2,
+    title: "End-to-End MLOps Pipeline",
+    description:
+      "Built an end-to-end MLOps pipeline covering data preprocessing, model training, evaluation, deployment, and monitoring. Implemented Docker-based containerization, version control using Git, and deployed ML models using Kubernetes. Integrated cloud platforms (AWS/GCP/Azure) for scalable production deployment.",
+    techStack: ["Python", "Docker", "Kubernetes", "ML Pipelines", "AWS", "GCP", "Azure"],
+    link: "https://github.com/JP007-star/ml_ops_project",
+    year: "2026",
+  },
+  {
+    id: 3,
     title: "Restaurant Application",
     description:
       "Developed Spring Boot Java Application and setup CI/CD pipeline using Jenkins, Ansible and demonstrated DevOps infrastructure using Docker, Kubernetes in AWS cloud.",
@@ -88,137 +139,84 @@ export const projects = [
     year: "2022",
   },
   {
-    id: 2,
+    id: 4,
     title: "Train Ticket Reservation System",
     description:
-      "Developed a simple Spring Boot Java Application with thymeleaf for rendering frontend. Application is used to reserve and generate ticket for Trains Journey.",
+      "Developed a Spring Boot Java Application with Thymeleaf for rendering the frontend. Application is used to reserve and generate tickets for train journeys.",
     techStack: ["Spring Boot", "Thymeleaf", "Java"],
     link: "https://github.com/JP007-star/TrainTicketReservation.git",
     year: "2021",
   },
   {
-    id: 3,
+    id: 5,
     title: "Home Automation (IOT)",
     description:
-      "RealTime IOT Project with NodeMCU and RealTime Database in Firebase for Controlling Home Appliance with Flutter Hybrid Mobile App",
+      "RealTime IOT Project with NodeMCU and RealTime Database in Firebase for Controlling Home Appliance with Flutter Hybrid Mobile App.",
     techStack: ["Flutter", "Firebase", "NodeMCU", "IOT"],
     link: "https://github.com/JP007-star/IOT-HOME.git",
     year: "2021",
-  },
-  {
-    id: 4,
-    title: "EYECARE!",
-    description:
-      "Eye & colour correction Website from Scratch. Web application for eye clinic @ Bangalore",
-    techStack: ["HTML", "CSS", "JavaScript", "jQuery"],
-    link: "",
-    year: "2020",
-  },
-  {
-    id: 5,
-    title: "Billing Software",
-    description:
-      "A Billing web application for Santham Food Products Developed from Scratch. A Web Application for A startup - Santham Food Products @ Tirunelveli",
-    techStack: ["HTML", "CSS", "JavaScript", "PHP"],
-    link: "",
-    year: "2020",
-  },
-  {
-    id: 6,
-    title: "Mobile Pick and Place Robot",
-    description:
-      "A Prototype model robot that can control with android app developed from MIT APP Inventor with bluetooth interface",
-    techStack: ["MIT App Inventor", "Bluetooth", "Robotics"],
-    link: "",
-    year: "2020",
   },
 ];
 
 export const education = [
   {
     id: 1,
-    degree: "Bachelor of Electrical and Electronics Engineering",
+    degree: "Bachelor of Engineering in Electrical and Electronics Engineering",
     institution: "SCAD College of Engineering and Technology",
     period: "2017-2021",
-    details: "Affiliated to Anna University - CGPA: 8.08",
-  },
-  {
-    id: 2,
-    degree: "Higher Secondary Schooling",
-    institution: "Sri Jayendra Swamigal Silver Jubilee School",
-    period: "2016-2017",
-    details: "79.25%",
-  },
-  {
-    id: 3,
-    degree: "Secondary Schooling",
-    institution: "Sri Jayendra Swamigal Silver Jubilee School",
-    period: "2014-2015",
-    details: "96.4%",
+    details: "Affiliated to Anna University - CGPA: 8.22",
   },
 ];
 
 export const awards = [
   {
     id: 1,
-    title: "State level 5th Prize in Painting",
-    organization: "Varaikalai Sirpi",
-    year: "2017",
-    description:
-      "During My first year Bachelor degree Namakkal Kalai Sangam had provided me State Level 5th Place in Painting Competition.",
+    title: "Rise and Shine Award",
+    organization: "Altimetrik",
+    year: "2025",
+    description: "Recognition for outstanding performance.",
   },
   {
     id: 2,
-    title: "First Prize in Paper Presentation",
-    organization: "ARCUS 2018, V.V College of Engineering",
-    year: "2018",
-    description: "Won first prize for Paper Presentation.",
+    title: "Team Excellence Award",
+    organization: "Torry Harris Integrated Solution",
+    year: "2024",
+    description: "Recognition for team excellence.",
   },
   {
     id: 3,
-    title: "First Prize in Paper Presentation",
-    organization: "National College of Engineering",
-    year: "2019",
-    description: "Won first prize for Vertical Axis Wind Mill Paper Presentation.",
+    title: "Team Excellence Award",
+    organization: "Torry Harris Integrated Solution",
+    year: "2023",
+    description: "Recognition for team excellence.",
   },
   {
     id: 4,
-    title: "Certified Lean Six Sigma Green Belt",
-    organization: "MSME",
-    year: "2020",
-    description:
-      "Undergone Lean Six Sigma Green Belt MSME Certification Program @ Franxis Xaviers Engineering College.",
+    title: "Rookie of the Quarter",
+    organization: "Torry Harris Integrated Solution",
+    year: "2023",
+    description: "Recognition as Rookie of the Quarter.",
   },
   {
     id: 5,
-    title: "Mobile App Development Workshop",
-    organization: "Francis Xaviers Engineering College",
-    year: "2019",
-    description:
-      "Delivered Guest Lecture and One Day Workshop about Mobile App Development (Flutter) for Second Year Students.",
+    title: "Green Belt Lean Six Sigma",
+    organization: "MSME",
+    year: "2020",
+    description: "Completed GREEN BELT LEAN SIX SIGMA certification program.",
   },
 ];
 
-export const services = [
+export const certifications = [
   {
     id: 1,
-    title: "Web Development",
-    description:
-      "We build Full Stack Application with Modern Technology cross all platforms to make your Business to cope with Trends",
-    icon: "code",
+    title: "Google Cloud Certified – Associate Cloud Engineer",
+    organization: "Google Cloud",
+    year: "2025",
   },
   {
     id: 2,
-    title: "App Development",
-    description:
-      "We build Hybrid Mobile Applications with Flutter Cross platform to make your application available in Android and IOS platform",
-    icon: "mobile",
-  },
-  {
-    id: 3,
-    title: "DevOps & Cloud",
-    description:
-      "Build infrastructure, CI/CD pipelines with Jenkins, Docker, Kubernetes, and automate with Ansible",
-    icon: "cloud",
+    title: "Oracle Gen AI Professional",
+    organization: "Oracle",
+    year: "2025",
   },
 ];

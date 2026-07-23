@@ -5,21 +5,21 @@ import { experience, education } from "@/data/portfolio";
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-32 bg-zinc-950">
-      <div className="container mx-auto px-4">
+    <section id="experience" className="py-32 bg-white">
+      <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <p className="text-indigo-400 font-mono text-xs uppercase tracking-[0.2em] mb-3">EXPERIENCE</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white">Work Experience</h2>
+          <p className="text-blue-600 font-semibold text-sm uppercase tracking-[0.3em] mb-4">EXPERIENCE</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900">Work Experience</h2>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="relative">
-            <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-zinc-800 transform md:-translate-x-1/2" />
+            <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-slate-200 transform md:-translate-x-1/2" />
 
             {experience.map((exp, index) => (
               <motion.div
@@ -28,39 +28,45 @@ export default function Experience() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.15, duration: 0.5 }}
-                className={`relative mb-8 ${
+                className={`relative mb-12 ${
                   index % 2 === 0 ? "md:pr-1/2 md:text-right" : "md:pl-1/2 md:ml-auto"
                 }`}
               >
                 <div
-                  className={`absolute top-3 w-2.5 h-2.5 bg-indigo-500 rounded-full shadow-lg shadow-indigo-500/50 ${
+                  className={`absolute top-4 w-4 h-4 bg-blue-600 rounded-full shadow-lg ring-4 ring-white ${
                     index % 2 === 0
-                      ? "md:left-1/2 md:-translate-x-1/2 -left-1.5"
-                      : "md:left-1/2 md:-translate-x-1/2 -left-1.5"
+                      ? "md:left-1/2 md:-translate-x-1/2 -left-2"
+                      : "md:left-1/2 md:-translate-x-1/2 -left-2"
                   }`}
                 />
 
                 <div
-                  className={`ml-8 md:ml-0 bg-zinc-900/60 rounded-xl p-6 border border-zinc-800/60 hover:border-indigo-500/30 transition-all ${
-                    index % 2 === 0 ? "md:mr-8" : "md:ml-8"
+                  className={`ml-10 md:ml-0 bg-slate-50 rounded-3xl p-8 border border-slate-200 ${
+                    index % 2 === 0 ? "md:mr-10" : "md:ml-10"
                   }`}
                 >
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="text-indigo-400 font-mono text-xs">
+                  <div className="flex flex-wrap items-center gap-4 mb-4">
+                    <span className="text-blue-600 font-semibold text-sm">
                       {exp.period}
                     </span>
-                    <span className="w-1 h-1 bg-zinc-600 rounded-full" />
-                    <span className="text-zinc-500 text-sm">{exp.company}</span>
+                    <span className="w-1.5 h-1.5 bg-slate-400 rounded-full hidden md:block" />
+                    <span className="text-slate-500">{exp.company}</span>
+                    {exp.location && <span className="text-slate-400">• {exp.location}</span>}
                   </div>
 
-                  <h3 className="text-lg font-semibold text-white mb-1.5">{exp.role}</h3>
-                  <p className="text-zinc-400 text-sm mb-4 leading-relaxed">{exp.description}</p>
+                  <h3 className="text-2xl font-semibold text-slate-900 mb-2">{exp.role}</h3>
+
+                  <p className="text-blue-700 font-medium text-base mb-4">{exp.description.split('.')[0]}.</p>
+
+                  <p className="text-slate-600 leading-relaxed mb-5">
+                    {exp.description.split('.').slice(1).join('.').trim()}
+                  </p>
 
                   <div className="flex flex-wrap gap-2">
                     {exp.achievements.map((achievement) => (
                       <span
                         key={achievement}
-                        className="px-2.5 py-1 bg-indigo-500/10 text-indigo-300 text-xs rounded-full border border-indigo-500/20"
+                        className="px-4 py-2 bg-blue-50 text-blue-700 text-sm rounded-full border border-blue-100"
                       >
                         {achievement}
                       </span>
@@ -78,8 +84,8 @@ export default function Experience() {
           viewport={{ once: true }}
           className="mt-20"
         >
-          <h3 className="text-2xl font-semibold text-white mb-8 text-center">Education</h3>
-          <div className="grid md:grid-cols-3 gap-5 max-w-4xl mx-auto">
+          <h3 className="text-3xl font-semibold text-slate-900 mb-10 text-center">Education</h3>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {education.map((edu, index) => (
               <motion.div
                 key={edu.id}
@@ -87,12 +93,12 @@ export default function Experience() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-zinc-900/60 rounded-xl p-5 border border-zinc-800/60 hover:border-zinc-700 transition-all"
+                className="bg-slate-50 rounded-2xl p-6 border border-slate-200 text-center"
               >
-                <span className="text-indigo-400 font-mono text-xs">{edu.period}</span>
-                <h4 className="text-base font-medium text-white mt-2 mb-1">{edu.degree}</h4>
-                <p className="text-zinc-500 text-sm mb-1">{edu.institution}</p>
-                <p className="text-zinc-600 text-sm">{edu.details}</p>
+                <span className="text-blue-600 font-semibold text-sm">{edu.period}</span>
+                <h4 className="text-lg font-medium text-slate-900 mt-3 mb-2">{edu.degree}</h4>
+                <p className="text-slate-500 mb-1">{edu.institution}</p>
+                <p className="text-slate-600">{edu.details}</p>
               </motion.div>
             ))}
           </div>

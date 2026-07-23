@@ -40,49 +40,43 @@ function ProjectCard({ project, index }: ProjectCardProps) {
         ref={cardRef}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
-        className="group relative bg-zinc-900/60 border border-zinc-800/60 rounded-xl p-5 transition-all duration-300 hover:border-indigo-500/40 hover:bg-zinc-900/80"
+        className="bg-slate-50 rounded-3xl p-8 border border-slate-200"
         style={{
           transform: `perspective(1000px) rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
           transformStyle: "preserve-3d",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-xl" />
+        <div className="flex items-center justify-between mb-6">
+          <span className="text-blue-600 font-semibold text-sm">{project.year}</span>
+          {project.link && (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 flex items-center justify-center rounded-xl bg-white border border-slate-200 text-slate-500 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          )}
+        </div>
 
-        <div className="relative z-10">
-          <div className="flex items-center justify-between mb-3">
-            <span className="text-indigo-400 font-mono text-xs">{project.year}</span>
-            {project.link && (
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-7 h-7 flex items-center justify-center rounded-lg bg-zinc-800 text-zinc-400 hover:bg-indigo-600 hover:text-white transition-all"
-              >
-                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </a>
-            )}
-          </div>
+        <h3 className="text-xl font-semibold text-slate-900 mb-4">{project.title}</h3>
 
-          <h3 className="text-base font-semibold text-white mb-2.5 group-hover:text-indigo-300 transition-colors">
-            {project.title}
-          </h3>
+        <p className="text-slate-600 leading-relaxed mb-6">
+          {project.description}
+        </p>
 
-          <p className="text-zinc-400 text-sm leading-relaxed mb-4 line-clamp-3">
-            {project.description}
-          </p>
-
-          <div className="flex flex-wrap gap-1.5">
-            {project.techStack.slice(0, 4).map((tech) => (
-              <span
-                key={tech}
-                className="px-2 py-1 bg-zinc-800/80 text-zinc-400 text-xs rounded-md border border-zinc-700/50"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
+        <div className="flex flex-wrap gap-2">
+          {project.techStack.slice(0, 4).map((tech) => (
+            <span
+              key={tech}
+              className="px-3 py-1.5 bg-white text-slate-600 text-sm rounded-lg border border-slate-200"
+            >
+              {tech}
+            </span>
+          ))}
         </div>
       </div>
     </motion.div>
@@ -91,19 +85,19 @@ function ProjectCard({ project, index }: ProjectCardProps) {
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-32 bg-[#0a0a0f]">
-      <div className="container mx-auto px-4">
+    <section id="projects" className="py-32 bg-slate-50">
+      <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <p className="text-indigo-400 font-mono text-xs uppercase tracking-[0.2em] mb-3">PROJECTS</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white">Featured Projects</h2>
+          <p className="text-blue-600 font-semibold text-sm uppercase tracking-[0.3em] mb-4">PROJECTS</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900">Featured Projects</h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {projects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
           ))}

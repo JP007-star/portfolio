@@ -31,11 +31,11 @@ function DotField() {
     <Points ref={ref} positions={dots} stride={3} frustumCulled={false}>
       <PointMaterial
         transparent
-        color="#818cf8"
+        color="#3b82f6"
         size={0.015}
         sizeAttenuation={true}
         depthWrite={false}
-        opacity={0.35}
+        opacity={0.3}
       />
     </Points>
   );
@@ -55,13 +55,13 @@ function AnimatedGrid() {
       {Array.from({ length: 25 }).map((_, i) => (
         <mesh key={i} position={[i * 0.5 - 6, 0, 0]} rotation={[-Math.PI / 2, 0, 0]}>
           <planeGeometry args={[0.015, 12]} />
-          <meshBasicMaterial color="#818cf8" transparent opacity={0.1} />
+          <meshBasicMaterial color="#3b82f6" transparent opacity={0.08} />
         </mesh>
       ))}
       {Array.from({ length: 25 }).map((_, i) => (
         <mesh key={`h-${i}`} position={[0, 0, i * 0.5 - 6]} rotation={[-Math.PI / 2, 0, 0]}>
           <planeGeometry args={[12, 0.015]} />
-          <meshBasicMaterial color="#818cf8" transparent opacity={0.1} />
+          <meshBasicMaterial color="#3b82f6" transparent opacity={0.08} />
         </mesh>
       ))}
     </group>

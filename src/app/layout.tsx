@@ -13,23 +13,23 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Jaya Prasad M | Lead Software Engineer",
+  title: "Jaya Prasad M | Java Developer",
   description:
-    "Full Stack Developer & DevOps Engineer - Building scalable systems with modern technologies. Specialized in React, Spring Boot, AWS, Docker, Kubernetes.",
+    "Java Developer with 4+ years of experience building scalable, cloud-native applications using Java, Spring Boot, React.js, and GCP.",
   keywords: [
-    "Lead Software Engineer",
+    "Java Developer",
     "Full Stack Developer",
-    "DevOps Engineer",
-    "React",
     "Spring Boot",
+    "React.js",
+    "GCP",
     "AWS",
     "Portfolio",
   ],
   authors: [{ name: "Jaya Prasad M" }],
   openGraph: {
-    title: "Jaya Prasad M | Lead Software Engineer",
+    title: "Jaya Prasad M | Java Developer",
     description:
-      "Full Stack Developer & DevOps Engineer - Building scalable systems with modern technologies.",
+      "Java Developer with 4+ years of experience building scalable, cloud-native applications.",
     type: "website",
   },
 };
@@ -42,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${inter.variable} ${jetbrainsMono.variable} font-sans bg-slate-950 text-slate-100 antialiased`}
+        className={`${inter.variable} ${jetbrainsMono.variable} font-sans bg-white text-slate-900 antialiased`}
       >
         {children}
       </body>

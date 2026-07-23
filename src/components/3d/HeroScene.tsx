@@ -36,11 +36,11 @@ function ParticleNetwork() {
     <Points ref={ref} positions={particles} stride={3} frustumCulled={false}>
       <PointMaterial
         transparent
-        color="#818cf8"
+        color="#3b82f6"
         size={0.012}
         sizeAttenuation={true}
         depthWrite={false}
-        opacity={0.5}
+        opacity={0.4}
       />
     </Points>
   );
@@ -60,10 +60,10 @@ function FloatingGeometric() {
     <mesh ref={meshRef} position={[2.5, 0.5, -1]}>
       <icosahedronGeometry args={[0.4, 0]} />
       <meshBasicMaterial
-        color="#818cf8"
+        color="#3b82f6"
         wireframe
         transparent
-        opacity={0.25}
+        opacity={0.2}
       />
     </mesh>
   );
@@ -82,10 +82,10 @@ function RotatingWireframe() {
     <mesh ref={meshRef} position={[-2.5, 0, -1.5]}>
       <octahedronGeometry args={[0.35, 0]} />
       <meshBasicMaterial
-        color="#a78bfa"
+        color="#60a5fa"
         wireframe
         transparent
-        opacity={0.3}
+        opacity={0.25}
       />
     </mesh>
   );
@@ -103,7 +103,7 @@ function SmallGeometric() {
   return (
     <mesh ref={meshRef} position={[0, 0.5, -2]}>
       <tetrahedronGeometry args={[0.2, 0]} />
-      <meshBasicMaterial color="#c084fc" wireframe transparent opacity={0.3} />
+      <meshBasicMaterial color="#93c5fd" wireframe transparent opacity={0.25} />
     </mesh>
   );
 }
